@@ -30,5 +30,9 @@ urlpatterns = [
     path('product_single/', views.product_single, name='product_single'),
     path('checkout/', views.checkout, name='checkout'),
     path('signup/', views.signup, name='signup'),
+    path('login/', views.login, name='login'),
+    path('logout/', views.logout, name='logout'),
+    path('cpassword/', views.cpassword, name='cpassword'),
+    path('fpassword/', views.fpassword, name='fpassword'),
     
 ]

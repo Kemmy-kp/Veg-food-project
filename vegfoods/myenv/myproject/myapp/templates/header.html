@@ -74,6 +74,12 @@
 	          <li class="nav-item"><a href="{% url "blog" %}" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="{% url "contact" %}" class="nav-link">Contact</a></li>
             <li class="nav-item"><a href="{% url "signup" %}" class="nav-link">Sign Up</a></li>
+            {% if request.session.email %}
+            <li class="nav-item"><a href="{% url "cpassword" %}" class="nav-link">change-password</a></li>
+            <li class="nav-item"><a href="{% url "logout" %}" class="nav-link">Logout</a></li>
+            {% else %}
+            <li class="nav-item"><a href="{% url "login" %}" class="nav-link">Login</a></li>
+            {% endif %}
 	          <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
 	        </ul>
