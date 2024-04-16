@@ -98,6 +98,12 @@ def cpassword(request):
 #=====================Forgot Password==============================
 
 def fpassword (request):
+    if request.method=="POST":
+        user=User.objects.get(mobile=request.POST['mobile'])
+        mobile = request.POST['mobile']
+        
+        
+        
     return render(request,'fpassword.html')
 
 def shop(request):
