@@ -92,11 +92,11 @@ def cpassword(request):
         else:
             msg = "Old Password Doesn't Match!!!"    
             return render(request,'cpassword.html',{'msg':msg})
-    else:
+    else: 
         return render(request,'cpassword.html')
 
 #=====================Forgot Password==============================
-
+ 
 def fpassword (request):
     if request.method=="POST":
         user=User.objects.get(mobile=request.POST['mobile'])
